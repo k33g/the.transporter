@@ -29,3 +29,5 @@ function main = |args| {
 ```
 
 Run it : `golo golo --files the.transporter.golo main.golo`
+
+![Alt Jason_Statham](http://ekladata.com/-vWHEmG64bc0NWRpcdITywzH0sk.jpg)
