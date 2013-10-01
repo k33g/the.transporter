@@ -16,8 +16,8 @@ augment java.util.LinkedList {
   function sum = |this| {		
     let sum = transporter(0)
 		this:each(|item| -> sum:add(item) )
-	    return sum:value() 
-	  }		
+	  return sum:value() 
+	}		
 }
 
 function main = |args| {
