@@ -15,9 +15,9 @@ import org.k33g.transporter
 augment java.util.LinkedList {
   function sum = |this| {		
     let sum = transporter(0)
-	this:each(|item| -> sum:value(sum:value()+item) )
-    return sum:value() 
-  }		
+		this:each(|item| -> sum:add(item) )
+	    return sum:value() 
+	  }		
 }
 
 function main = |args| {
@@ -25,7 +25,6 @@ function main = |args| {
     list[1,2,3,4,5]:sum()
   )
 }
-
 ```
 
 Run it : `golo golo --files the.transporter.golo main.golo`
