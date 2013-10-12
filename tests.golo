@@ -39,19 +39,19 @@ function main = |args| {
   )
 
   println(
-    a: isEqual(b, |self|->"A == B", |self|->"A != B")
+    a: isEqual(b, |self, other|->"A == B", |self, other|->"A != B")
   ) # return "A != B"
   println(
-    a: isEqual(b, |self|->"A == B")
+    a: isEqual(b, |self, other|->"A == B")
   ) # return false
 
   let test = a: isGreater(b
-    , |self| {
-      println("a is greater than b!")
+    , |self, other| {
+      println("a ("+self: value()+") is greater than b ("+other: value()+")!")
       return true
     }
-    , |self| {
-      println("b is greater than a!")
+    , |self, other| {
+      println("b ("+other: value()+") is greater than a ("+self: value()+")!")
       return false
     }
   )
